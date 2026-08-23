@@ -87,42 +87,97 @@ https://github.com/mukeshpatel1006/mcp-ai-client-chatbot
                    │  ⬇️ Download       │
                    └────────────────────┘
 
-**Complete Flow **
+**Complete Flow **                   User
+                   │
+                   ▼
+            Streamlit Chat
+                   │
+                   ▼
+                Groq
+                   │
+                   ▼
+      create_rotating_triangle
+                   │
+                   ▼
+             MCP Protocol
+                   │
+                   ▼
+         manim_server.py
+                   │
+                   ▼
+                Manim
+                   │
+                   ▼
+             Render MP4
+                   │
+                   ▼
+          manim_output/videos
+                   │
+                   ▼
+          Return video_path
+                   │
+                   ▼
+             Streamlit
+              │        │
+              ▼        ▼
+            Play    Download
 
-User
-  │
-  ▼
-Streamlit
-  │
-  ▼
-Groq
-  │
-  ▼
-Determine required MCP tool
-  │
-  ▼
-LangChain MCP Adapter
-  │
-  ├─────────────── Calculator
-  │
-  ├─────────────── Expense
-  │
-  └─────────────── Manim
-  │
-  ▼
-MCP Server
-  │
-  ▼
-Tool Execution
-  │
-  ▼
-Tool Result
-  │
-  ▼
-Groq
-  │
-  ▼
-Final Response
-  │
-  ▼
-Streamlit
+Video Architecture
+
+                  User
+                   │
+                   ▼
+            Streamlit Chat
+                   │
+                   ▼
+                Groq
+                   │
+                   ▼
+      create_rotating_triangle
+                   │
+                   ▼
+             MCP Protocol
+                   │
+                   ▼
+         manim_server.py
+                   │
+                   ▼
+                Manim
+                   │
+                   ▼
+             Render MP4
+                   │
+                   ▼
+          manim_output/videos
+                   │
+                   ▼
+          Return video_path
+                   │
+                   ▼
+             Streamlit
+              │        │
+              ▼        ▼
+            Play    Download
+
+🏠 Local Development Structure
+
+C:\Users\Mukesh Patel\Desktop\
+│
+├── MCP-MATH-SERVER\
+│   │
+│   ├── main.py
+│   ├── manim_server.py
+│   ├── pyproject.toml
+│   ├── uv.lock
+│   ├── .venv\
+│   │
+│   └── manim_output\
+│
+└── youtube-mcp-client\
+    │
+    ├── client1.py
+    ├── client2.py
+    ├── pyproject.toml
+    ├── uv.lock
+    ├── .env
+    └── .venv\
